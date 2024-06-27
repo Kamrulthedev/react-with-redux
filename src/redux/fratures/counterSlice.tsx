@@ -6,7 +6,6 @@ type CounterType = {
   count: number
 }
 
-
 const initialState : CounterType = { count: 0 };
 
 const counterSlice = createSlice({
@@ -27,6 +26,8 @@ const counterSlice = createSlice({
     },
   },
 });
+
+
 
 export const {decrement, increment, increment5 , decrement5} = counterSlice.actions;
 export default counterSlice.reducer;

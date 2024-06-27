@@ -1,10 +1,16 @@
-import { decrement, decrement5, increment, increment5 } from "./redux/fratures/counterSlice";
+import {
+  decrement,
+  decrement5,
+  increment,
+  increment5,
+} from "./redux/fratures/counterSlice";
 import { useAppDispatch, useAppSelector } from "./redux/hook";
 
 function App() {
   const { count } = useAppSelector((state) => state.counter);
   const dispatch = useAppDispatch();
 
+  
   return (
     <>
       <div className="items-center w-full h-screen flex justify-center ">
@@ -31,7 +37,7 @@ function App() {
             Dcrement
           </button>
           <button
-        onClick={() => dispatch(decrement5(5))}
+            onClick={() => dispatch(decrement5(5))}
             className="px-3 py-2 bg-red-500 rounded-md text-xl font-semibold text-white"
           >
             Dcrement 5
